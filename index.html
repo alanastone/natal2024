@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .link-group {
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .sub-links {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Links de Músicas</h1>
+
+        <div class="link-group">
+            <a href="link_para_o_pdf.pdf" target="_blank">PDF das Músicas</a>
+        </div>
+
+        <div class="link-group">
+            <a href="#">01 - Canção de Natal</a>
+            <div class="sub-links">
+                <a href="link_para_o_instrumental.mp3" target="_blank">Instrumental</a>
+                <a href="link_para_soprano.mp3" target="_blank">Soprano</a>
+                <a href="link_para_contralto.mp3" target="_blank">Contralto</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
