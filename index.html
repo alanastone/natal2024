@@ -36,27 +36,11 @@
         a:hover {
             color: #0056b3;
         }
-        .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .active, .collapsible:hover {
-            background-color: #555;
-        }
-
         .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            display: none; /* Inicialmente ocultas */
         }
     </style>
 </head>
@@ -79,6 +63,23 @@
     
     <h2 style="text-align: center;">Músicas</h2>
     <table>
+        <tr>
+            <td><a href="#" onclick="showTable(1)">01 - Noite Feliz</a></td>
+            <td><a href="#" onclick="showTable(2)">02 - Eis o nosso salvador</a></td>
+            <td><a href="#" onclick="showTable(3)">03 - Maria Tu Sabias</a></td>
+        </tr>
+        <tr>
+            <td><a href="#" onclick="showTable(4)">04 - Canção de Natal</a></td>
+            <td><a href="#" onclick="showTable(5)">05 - Da Vida O Melhor</a></td>
+            <td><a href="#" onclick="showTable(6)">06 - Cangaia</a></td>
+        </tr>
+        <tr>
+            <td><a href="#" onclick="showTable(7)">07 - Que amor é esse</a></td>
+            <td><a href="#" onclick="showTable(8)">08 - Se eu tenho você</a></td>
+            <td><a href="#" onclick="showTable(9)">09 - Glorificar</a></td>
+        </tr>
+    </table>
+    <table id="table2" class="content">
         <tr>
             <th colspan="2">02 - Eis o nosso Salvador</th>
         </tr>
@@ -117,6 +118,7 @@
         </tr>
     </table>
 
+    <div id="table3" class="content">
     <table>
         <tr>
             <th colspan="2">03 - Maria Tu Sabias</th>
@@ -155,7 +157,8 @@
             <td colspan="2"><a href="https://drive.google.com/drive/folders/1ERgN57DYGHCxT1zu5JOOOZrzqvOeJ3uK" target="_blank">Pasta no drive</a></td>
         </tr>
     </table>
-
+    </div>
+    
     <!-- CANCAO DE NATAL  -->
     <table>
         <tr>
@@ -357,8 +360,10 @@
     </table>
     
     <!-- GLORIFICAR -->
-    <button class="collapsible">09 - Glorificar</button>
     <table>
+        <tr>
+            <th colspan="2">09 - Glorificar</th>
+        </tr>
         <tr>
             <td>Original</td>
             <td>
@@ -394,17 +399,15 @@
         </tr>
     </table>
     <script>
-        var coll = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
+        function showTable(tableNumber) {
+            // Esconde todas as tabelas
+            var tables = document.querySelectorAll('.content');
+            tables.forEach(function(table) {
+                table.style.display = 'none';
             });
+
+            // Mostra a tabela selecionada
+            document.getElementById('table' + tableNumber).style.display = 'block';
         }
     </script> 
 
