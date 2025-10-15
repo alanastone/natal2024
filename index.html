@@ -45,9 +45,58 @@
         .hidden {
             display: none; /* Esconde a div */
         }
+        .button-container {
+            position: relative;
+            display: inline-block;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #dc3545;
+            animation: bounce 1.5s infinite;
+        }
+        .arrow-left {
+            left: -60px;
+        }
+        .arrow-right {
+            right: -60px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(-50%) translateX(0);
+            }
+            40% {
+                transform: translateY(-50%) translateX(10px);
+            }
+            60% {
+                transform: translateY(-50%) translateX(-10px);
+            }
+        }
     </style>
 </head>
 <body>
+
+    <div style="text-align: center; margin-bottom: 40px;">
+        <div class="button-container">
+            <span class="arrow arrow-left">👉</span>
+            <a href="https://alanastone.github.io/natal2025/" style="
+                display: inline-block;
+                background-color: #dc3545;
+                color: white;
+                padding: 15px 30px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            " onmouseover="this.style.backgroundColor='#c82333'" onmouseout="this.style.backgroundColor='#dc3545'">
+                Cantata de Natal 2025
+            </a>
+            <span class="arrow arrow-right">👈</span>
+        </div>
+    </div>
 
     <h1 style="text-align: center;">Musical de Natal 2024</h1>
 
